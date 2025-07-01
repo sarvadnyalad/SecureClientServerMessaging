@@ -1,6 +1,6 @@
 # Secure Agent Messaging System
 
-This project is a Java-based secure client-server messaging system developed for the MSc Computer Science module on Cybersecurity. It demonstrates the implementation of public-key cryptography, digital signatures, and message confidentiality in a simulated environment of secret agents.
+This project was developed as part of a group coursework for the MSc Computer Science module on Cybersecurity at the University of Leicester. It showcases a Java-based secure client-server messaging system using cryptographic techniques such as RSA, SHA256withRSA signatures, and message confidentiality.
 
 ## 🔐 Features
 
@@ -17,9 +17,9 @@ This project is a Java-based secure client-server messaging system developed for
 SecureAgentMessagingSystem/
 ├── Client.java               # The client-side application
 ├── Server.java               # The server-side application
-├── RSAKeyGen.java            # Utility for generating RSA key pairs
-├── alice.pub / alice.prv     # Sample public/private key files (one per user)
-├── server.pub / server.prv   # Server's key files
+├── keyGenerationRSA.java            # Utility for generating RSA key pairs
+├── Lad.prv                 # Sample public/private key files (one per user)
+├── server.prv   # Server's key files
 ├── README.md
 ```
 
@@ -67,7 +67,7 @@ java Server 8888
 4. In another terminal, start the client:
 
 ```
-java Client localhost 8888 alice
+java Client localhost 8888 Vivek
 ```
 
 ## 🧾 Notes
@@ -76,3 +76,9 @@ java Client localhost 8888 alice
 - The server does **not** persist data—message storage is in-memory.
 - The client retrieves **all available messages** on startup.
 - Signature validation includes both the **encrypted message and timestamp**.
+
+## 📜 License
+
+This project is for educational use as part of the University of Leicester MSc program. You may reuse or modify it under the [MIT License](https://opensource.org/licenses/MIT).
+
+> ⚠️ **Disclaimer:** This project was submitted as university coursework. It is published here for educational and portfolio purposes only. Please do not reuse this code for academic submissions.
